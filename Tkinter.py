@@ -3,11 +3,14 @@ from tkinter import ttk
 from tkinter import messagebox
 from tkinter import *
 from tkinter import scrolledtext
+import sys
+from tkinter import filedialog as fd
+from tkinter import messagebox as mb
 
 def init_window():
     window = tk.Tk()
     window.title('Mi primera aplicacion')
-    window.geometry('500x250')
+    window.geometry('600x350')
 
     label = tk.Label(window, text="Hello", font = ('Arial bond', 20))
     label.grid(column=1, row=0)
@@ -53,25 +56,26 @@ def init_window():
 
         messagebox.showinfo('Bienvenido', '¡Gracias por usar la calculadora!')
 
-    btn = tk.Button(window, text = 'Haga Click', command = clicked)
-    btn.grid (column = 1, row = 5)
+    btn = tk.Button(window, text = '¡Gracias!', command = clicked)
+    btn.grid (column = 2, row = 0)
 
     label = tk.Label(window, text="Hello")
     label.grid(column=0, row=6)
     def clicked():
     
         label.configure(text="Hola :D, ¿Como estas?")
-        txt = scrolledtext.ScrolledText(window,width=45,height=5)
-        txt.grid(column=3,row=7)
-        txt.insert(INSERT, """███    ███ ██████████ ███         ████████
-███    ███ ███    ███ ███        ███    ███
-██████████ ███    ███ ███        ██████████
-███    ███ ███    ███ ███        ███    ███
-███    ███ ██████████ ██████████ ███    ███ """)
-    
+        txt = scrolledtext.ScrolledText(window,width=40,height=5)
+        txt.grid(column=1,row=6)
+        txt.insert(INSERT, """Hola\n En la calculadora podrás sumar, restar, multiplicar, dividir o elevar potencias\n Gracias por usar la calculadora""")
+        res = messagebox.askquestion('Ask_1','¿Te gustó la app?')
+        res = messagebox.askyesno('Answer_N','Gracias por tu respuesta')
+        res = messagebox.askyesnocancel('Answer_C','Proximamente mejoraremos nuestra app')
+        res = messagebox.askokcancel('Ans_O','Tu opinion es importante para nosotros :D')
+        res = messagebox.askretrycancel('Ans_T','Que tengas un buen dia\n Vuelve pronto')
 
     btn = Button(window, text="Dame un click", command=clicked)
-    btn.grid(column=1, row=6)
+    btn.grid(column=1, row=8)
+
 
     
 
