@@ -11,6 +11,6 @@ Informacion necesaria para ejecutar el programa:
     → ScrolledText
     → MessageBox - ShowInfo
     → AskQuestion - Dialogs
-Vista previa app calculadora
+
 ![](/Imagenes/1.png)
 ![](/Imagenes/2.png)
