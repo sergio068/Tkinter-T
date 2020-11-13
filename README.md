@@ -12,5 +12,5 @@ Informacion necesaria para ejecutar el programa:
     → MessageBox - ShowInfo
     → AskQuestion - Dialogs
 Vista previa app calculadora
-(/Imagenes/1.png)
-(/Imagenes/2.png)
+![](/Imagenes/1.png)
+![](/Imagenes/2.png)
